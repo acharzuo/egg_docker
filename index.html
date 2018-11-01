@@ -1,5 +1,144 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+        <title>DEMO</title>
+        <!-- <link rel="stylesheet" href="./libs/jquery/jquery.mobile-1.4.5.css" type="text/css" media="screen" /> -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <script>
+        console.log($.fn.jquery) ;
+            $(function(){
+                $("#swipBox").on("swipeleft", function(event){
+                    $(event.target).text("左滑动").css('background', "#f39");
+                }).on("swiperight", function(event){
+                    $(event.target).text("右滑动").css('background', "#fc0");
+                })
+
+                $("event").on("Pageshow",function(enent){
+                    $("swipBox").text("Show");
+                });
+            });
+        </script>
+    </head>
     <body>
-        <h1>Hello!</h1>
+        <div data-role="page">
+            <ul data-role="content">
+                <li><a href="#pageTgideas">About</a></li>
+                <li><a href="#">About Ten</a></li>
+            </ul>
+        </div>
+        <div data-role="page" id="pageTgideas">
+            <div data-role="header" class="JQueryMobile-header" data-position="inline">
+                <a href="#" class="ui-btn-left ui-btn ui-icon-arrow-l ui-btn-icon-left ui-btn-inline ui-corner-all ui-mini" data-role="button" role="button">back</a>
+                <h1>header</h1>
+                <a href="#" class="ui-btn-right ui-btn ui-icon-action ui-btn-icon-right ui-btn-inline ui-corner-all" data-role="button" role="button"> share</a>
+                </div>
+            <div data-role="navbar" data-iconpos="left">
+                <ul>
+                    <li><a href="#" data-icon="grid" >腾讯游戏</a></li>
+                    <li><a href="#" data-icon="star">腾讯游戏2</a></li>
+                    <li><a href="#" data-icon="gear" >腾讯游戏3</a></li>
+                </ul>
+            </div>
+            <p data-role="content">
+                这里是内容 
+                <a href="#grid">列表</a>
+            </p>
+        </div>
+        <div data-role="page" id="grid">
+                ui-grid-a
+            <div class="ui-grid-a">
+                <div class="ui-block-a"><div class="ui-bar ui-bar-a">BLOCK A</div></div>
+                <div class="ui-block-b"><div class="ui-bar ui-bar-a">BLOCK B</div></div>
+                <div class="ui-block-c"><div class="ui-bar ui-bar-a">BLOCK C</div></div>
+            </div>
+            ui-grid-b
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><div class="ui-bar ui-bar-a">BLOCK A</div></div>
+                <div class="ui-block-b"><div class="ui-bar ui-bar-a">BLOCK B</div></div>
+                <div class="ui-block-c"><div class="ui-bar ui-bar-a">BLOCK C</div></div>
+            </div>
+            ui-grid-c
+            <div class="ui-grid-c">
+                <div class="ui-block-a"><div class="ui-bar ui-bar-a">BLOCK A</div></div>
+                <div class="ui-block-b"><div class="ui-bar ui-bar-a">BLOCK B</div></div>
+                <div class="ui-block-c"><div class="ui-bar ui-bar-a">BLOCK C</div></div>
+                <div class="ui-block-c"><div class="ui-bar ui-bar-a">BLOCK C</div></div>
+            </div>
+            ui-grid-d
+            <div class="ui-grid-d">
+                <div class="ui-block-a"><div class="ui-bar ui-bar-a">BLOCK A</div></div>
+                <div class="ui-block-b"><div class="ui-bar ui-bar-a">BLOCK B</div></div>
+                <div class="ui-block-c"><div class="ui-bar ui-bar-a">BLOCK C</div></div>
+                <div class="ui-block-c"><div class="ui-bar ui-bar-a">BLOCK C</div></div>
+                <div class="ui-block-c"><div class="ui-bar ui-bar-a">BLOCK C</div></div>
+            </div>
+        </div>
+        <div data-role="page" id="com">
+            <a href="#" class="ui-btn"> TouchMe </a>
+            <button class="ui-btn">ClickMe</button>
+            <div>
+                <a href="#" class="ui-btn ui-btn-inline"> touchMe </a>
+                <a href="#" class="ui-btn ui-btn-inline"> trytouchMe </a>
+                
+            </div>
+
+            <fieldset data-role="controlgroup">
+                <legend>表单控件</legend>
+                <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked">
+                <label for="radio-choice-1">拳皇八神</label>
+                <input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2" >
+                <label for="radio-choice-2">拳皇2神</label>
+                <input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3" >
+                <label for="radio-choice-3">拳皇3神</label>
+            </fieldset>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>表单控件</legend>
+                    <input type="radio" name="radio-choice1-1" id="radio-choice1-1" value="choice1-1" checked="checked">
+                    <label for="radio-choice1-1">拳皇八神</label>
+                    <input type="radio" name="radio-choice1-1" id="radio-choice1-2" value="choice1-2" >
+                    <label for="radio-choice1-2">拳皇2神</label>
+                    <input type="radio" name="radio-choice1-1" id="radio-choice1-3" value="choice1-3">
+                    <label for="radio-choice1-3">拳皇3神</label>
+            </fieldset>
+
+            <ol data-role="listview">
+                <li><a href="#">qq</a></li>
+                <li><a href="#">qq</a></li>
+                <li><a href="#">qq</a></li>
+            </ol>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#">qq</a></li>
+                <li><a href="#">qq</a></li>
+                <li><a href="#">qq</a></li>
+            </ul>
+            <ul data-role="listview" data-autodividers="true" data-inset="true">
+                <li><a href="#">qq</a></li>
+                <li><a href="#">aa</a></li>
+                <li><a href="#">cc</a></li>
+            </ul>
+        </div>
+        <div data-role="page" id="event">
+            <style>
+                div.box {
+                    width: 30em;
+                    height: 500px;
+                    line-height: 500px;
+                    background-color: #cccccc;
+                    text-indent: 10px;
+                    text-shadow: none;
+                }
+            </style>
+            <div data-role="header" class="JQueryMobile-header" data-position="inline">
+                <h1> 左右滑动 </h1>
+            </div>
+            <div id="swipBox" class="box"></div>
+        </div>
+<!--         
+        <script src="./libs/jquery-3.3.1.js"></script>
+        <script src="./libs/jquery/jquery.mobile-1.4.5.js"></script> -->
     </body>
 </html>
